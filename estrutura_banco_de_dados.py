@@ -5,11 +5,12 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 #Criar uma instancia de SQL Alchemy
-app.config['SECRET_KEY'] = 'colocar_algo_dificil'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SECRET_KEY'] = 'OAVVBPA#$!FAO'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.dmeggyiujgvjtborntfl:8R3kuQHAnnRcPAaU@aws-0-us-west-1.pooler.supabase.com:6543/postgres'
+#Passaword Database = 8R3kuQHAnnRcPAaU
 
 db = SQLAlchemy(app)
-db:SQLAlchemy
+db: SQLAlchemy
 
 #Definir a estrutura da tabela Postagem
 class Postagem(db.Model):
